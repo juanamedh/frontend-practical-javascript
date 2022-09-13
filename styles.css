@@ -163,7 +163,14 @@ nav {
   .navbar-left ul {
     display: none;
   }
-  .navbar-email {
+  .navbar-email,
+  .desktop-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 641px) {
+  .mobile-menu {
     display: none;
   }
 }
