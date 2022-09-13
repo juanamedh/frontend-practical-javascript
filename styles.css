@@ -1,3 +1,5 @@
+/* General Styles*/
+
 :root {
   --white: #FFFFFF;
   --black: #000000;
@@ -15,6 +17,8 @@ body {
 .inactive {
   display: none;
 }
+
+/* General navbar styles*/
 nav {
   display: flex;
   justify-content: space-between;
@@ -79,6 +83,8 @@ nav {
   align-items: center;
 }
 
+/* Desktop Menu Styles*/
+
 .desktop-menu {
   position: absolute;
   background: var(--white);
@@ -118,7 +124,11 @@ nav {
   display: inline-block;
 }
 
+/* Mobile Menu styles*/
+
 .mobile-menu {
+  position: absolute;
+  top: 60px;
   padding: 24px;
 }
 .mobile-menu a {
