@@ -10,6 +10,11 @@ hamburgerMenu.addEventListener('click', toggleMobileMenu);
 cartMenuIcon.addEventListener('click', toggleShoppingCartMenu);
 
 function toggleDesktopMenu() {
+    const isShoppingMenuClosed = shoppingCartMenu.classList.contains('inactive') 
+
+    if (!isShoppingMenuClosed) {
+        shoppingCartMenu.classList.toggle('inactive')
+    }
     desktopMenu.classList.toggle('inactive');
 }
 function toggleMobileMenu() {
