@@ -237,7 +237,7 @@ nav {
   height: 50px;
 }
 
-/* Main Content Styles */
+/* Product List Styles */
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 240px);
