@@ -4,5 +4,5 @@ const desktopMenu = document.querySelector('.desktop-menu');
 menuEmail.addEventListener('click', toggleDesktopMenu);
 
 function toggleDesktopMenu() {
-    menuEmail.classList.toggle('inactive');
+    desktopMenu.classList.toggle('inactive');
 }
