@@ -13,8 +13,19 @@ function toggleDesktopMenu() {
     desktopMenu.classList.toggle('inactive');
 }
 function toggleMobileMenu() {
+    const isShoppingMenuClosed = shoppingCartMenu.classList.contains('inactive') 
+
+    if (!isShoppingMenuClosed) {
+        shoppingCartMenu.classList.toggle('inactive')
+    }
+
     mobileMenu.classList.toggle('inactive');
 }
 function toggleShoppingCartMenu() {
-    shoppingCartMenu.classList.toggle('inactive');
+    const isMobileMenuClosed = mobileMenu.classList.contains('inactive')
+
+    if (!isMobileMenuClosed) {
+        mobileMenu.classList.add('inactive')
+    }
+    shoppingCartMenu.classList.toggle('inactive')
 }
