@@ -12,6 +12,9 @@ body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
 }
+.inactive {
+  display: none;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -75,6 +78,10 @@ nav {
   align-items: center;
 }
 .desktop-menu {
+  position: absolute;
+  background: var(--white);
+  top: 60px;
+  right:  60px;
   width: 100px;
   height: auto;
   border: 1px solid var(--very-light-pink);
