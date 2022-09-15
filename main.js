@@ -5,6 +5,7 @@ const desktopMenu = document.querySelector('.desktop-menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const cartMenuIcon = document.querySelector('li.navbar-shopping-cart');
 const shoppingCartMenu = document.querySelector('aside.shopping-cartContainer');
+const goBackFromCart = document.querySelector('.title-container img')
 const cardsContainer = document.querySelector('.cards-container');
 const productDetailContainer = document.querySelector('aside.product-detail')
 
@@ -12,6 +13,7 @@ menuEmail.addEventListener('click', toggleDesktopMenu);
 hamburgerMenu.addEventListener('click', toggleMobileMenu);
 cartMenuIcon.addEventListener('click', toggleShoppingCartMenu);
 productDetailClose.addEventListener('click', closeProductDetail);
+goBackFromCart.addEventListener('click', toggleShoppingCartMenu);
 
 function toggleDesktopMenu() {
     const isShoppingMenuClosed = shoppingCartMenu.classList.contains('inactive') 
