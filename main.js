@@ -1,14 +1,17 @@
 const menuEmail = document.querySelector('.navbar-email');
-const desktopMenu = document.querySelector('.desktop-menu');
 const hamburgerMenu = document.querySelector('nav img.menu');
+const productDetailClose = document.querySelector(' .product-detail-close');
+const desktopMenu = document.querySelector('.desktop-menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const cartMenuIcon = document.querySelector('li.navbar-shopping-cart');
 const shoppingCartMenu = document.querySelector('aside.shopping-cartContainer');
 const cardsContainer = document.querySelector('.cards-container');
+const productDetailContainer = document.querySelector('aside.product-detail')
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
 hamburgerMenu.addEventListener('click', toggleMobileMenu);
 cartMenuIcon.addEventListener('click', toggleShoppingCartMenu);
+productDetailClose.addEventListener('click', closeProductDetail);
 
 function toggleDesktopMenu() {
     const isShoppingMenuClosed = shoppingCartMenu.classList.contains('inactive') 
@@ -35,6 +38,15 @@ function toggleShoppingCartMenu() {
     }
     shoppingCartMenu.classList.toggle('inactive')
 }
+
+function openProductDetail() {
+    productDetailContainer.classList.remove('inactive')
+};
+
+function closeProductDetail() {
+    productDetailContainer.classList.add('inactive');
+};
+
 
 const productList = []
 productList.push({
@@ -76,6 +88,7 @@ function renderProductCards(arr) {
         //product = {name, price, image} -> product.image 
         const productImg = document.createElement('img');
         productImg.setAttribute('src', product.image);
+        productImg.addEventListener('click', openProductDetail);
     
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-info');
