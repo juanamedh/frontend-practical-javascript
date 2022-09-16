@@ -25,6 +25,7 @@ function toggleDesktopMenu() {
 }
 function toggleMobileMenu() {
     const isShoppingMenuClosed = shoppingCartMenu.classList.contains('inactive') 
+    closeProductDetail();
 
     if (!isShoppingMenuClosed) {
         shoppingCartMenu.classList.toggle('inactive')
