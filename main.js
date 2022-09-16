@@ -33,16 +33,27 @@ function toggleMobileMenu() {
     mobileMenu.classList.toggle('inactive');
 }
 function toggleShoppingCartMenu() {
-    const isMobileMenuClosed = mobileMenu.classList.contains('inactive')
+    const isMobileMenuClosed = mobileMenu.classList.contains('inactive');
+    const isProductDetailClosed = productDetailContainer.classList.contains('inactive');
 
     if (!isMobileMenuClosed) {
-        mobileMenu.classList.add('inactive')
-    }
+        mobileMenu.classList.add('inactive');
+    };
+
+    if (!isProductDetailClosed) {
+        productDetailContainer.classList.add('inactive');
+    };
+
     shoppingCartMenu.classList.toggle('inactive')
 }
 
 function openProductDetail() {
-    productDetailContainer.classList.remove('inactive')
+    const isShoppingCartClosed = shoppingCartMenu.classList.contains('inactive');
+    if (!isShoppingCartClosed) {
+        shoppingCartMenu.classList.add('inactive');
+    };
+
+    productDetailContainer.classList.remove('inactive');
 };
 
 function closeProductDetail() {
